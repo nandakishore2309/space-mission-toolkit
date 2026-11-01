@@ -149,7 +149,7 @@ int main(void)
                             break;
                         case 7:
                             printf("Hohmann Transfer Calculator\n");
-                            hohmann_transfer(void);
+                            hohmann_transfer();
                             break;                       
                         case 8:
                             printf("Geostationary Orbit Calculator\n");
@@ -331,7 +331,7 @@ int hohmann_transfer(void)
         case 3: u = hfJUPITER; break;
         case 4:
             printf("Enter custom gravitational parameter mu (km^3/s^2): ");
-            scanf_s("%lf", &u, sizeof(u));
+            scanf_s("%lf", &u);
             break;
         default:
             printf("Invalid choice.Select a valid central body.\n");
