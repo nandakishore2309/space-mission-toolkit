@@ -99,7 +99,7 @@ int main(void)
                             printf("Gravitational Force: %.2e N\n", result);
                             break;
                         case 4:
-                            printf("Elliptical Orbit Analyzer is under development.\n");
+                            printf("Elliptical Orbit Analyzer.\n");
                             printf("If we know the semi-major axis (a1) and semi-minor axis (b1) of an elliptical orbit press 1\n");
                             printf("If we know the periapsis (p) and apoapsis (a) of an elliptical orbit press 2\n");
                             int choice;
