@@ -18,7 +18,7 @@ int calculate_parameters1(double a1, double b1);
 int calculate_parameters2(double p, double a);
 double calculate_vorbitalspeed(double r, double M, double a1);
 double geostationary_orbit_radius(double T, double M);
-void hohmann_transfer(void);
+int hohmann_transfer(void);
 int main(void)
 {
     int c = 1;
@@ -149,7 +149,7 @@ int main(void)
                             break;
                         case 7:
                             printf("Hohmann Transfer Calculator\n");
-                            void hohmann_transfer(void);
+                            hohmann_transfer(void);
                             break;                       
                         case 8:
                             printf("Geostationary Orbit Calculator\n");
@@ -308,7 +308,7 @@ double calculate_vorbitalspeed(double r, double M, double a1)
     return sqrt(G * M * ((2.0 / r) - (1.0 / a1)));
 }
  
-void hohmann_transfer(void)
+int hohmann_transfer(void)
 {
     int choice;
     double u, r1, r2;
@@ -340,9 +340,9 @@ void hohmann_transfer(void)
     printf("\nAre distances in kilometers(k) or astronomical Units(a)? [TYPE k/a]: ");
     scanf_s(" %c", &unit_choice, 1);
     printf("Enter initial orbit radius (r1): ");
-    scanf_s("%lf", &r1, sizeof(r1));
+    scanf_s("%lf", &r1);
     printf("Enter final orbit radius (r2): ");
-    scanf_s("%lf", &r2, sizeof(r2));
+    scanf_s("%lf", &r2);
     if (unit_choice == 'a') 
     {
         r1 *= AU_TO_KM;
@@ -351,7 +351,7 @@ void hohmann_transfer(void)
     if (r1 <= 0 || r2 <= 0) 
     {
         printf("Error: Orbital radii must be greater than zero.\n");
-        return 1;
+        return 0;
     }
     double a = (r1 + r2) / 2.0;
     double v1 = sqrt(u / r1);
