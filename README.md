@@ -234,9 +234,9 @@ This software toolkit is built exclusively for **educational, exploratory, and p
 ---
 
 ## 👨‍💻 Author & Interests
-Tirlangi Nanda Kishore
-Electronics and communication engineering student
-Contact: nandakishore.2309@gmail.com
+* ---------------*Tirlangi Nanda Kishore*--------------
+* *Electronics and communication engineering student*
+* Contact: nandakishore.2309@gmail.com
 
 
 Developed by an Engineering Student passionate about:
